@@ -1,0 +1,22 @@
+
+body {
+    background-image: url(https://wallpapers.com/images/high/study-4k-with-handouts-n3cqzs778f2ozfrs.webp);
+    background-size: cover;
+}
+
+.btn-primary,
+.btn-second {
+    display: block;
+    width: 150px; /* Thay đổi kích thước tùy theo nhu cầu */
+    margin-bottom: 100px; /* Khoảng cách giữa các nút */
+}
+
+.btn-primary {
+    background-color: purple;
+    color: white;
+}
+
+.btn-second {
+    background-color: silver;
+    color: white;
+}

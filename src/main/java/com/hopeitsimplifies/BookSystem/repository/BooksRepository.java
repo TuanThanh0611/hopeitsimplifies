@@ -1,4 +1,4 @@
-package com.hopeitsimplifies.BookSystem.services;
+package com.hopeitsimplifies.BookSystem.repository;
 
 import com.hopeitsimplifies.BookSystem.models.Book;
 import org.springframework.data.jpa.repository.JpaRepository;

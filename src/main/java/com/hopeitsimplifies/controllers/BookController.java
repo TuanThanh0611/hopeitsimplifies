@@ -1,7 +1,7 @@
 package com.hopeitsimplifies.controllers;
 
 import com.hopeitsimplifies.BookSystem.models.Book;
-import com.hopeitsimplifies.BookSystem.services.BooksRepository;
+import com.hopeitsimplifies.BookSystem.services.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,16 +12,17 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/books")
-public class HomeController {
+public class BookController {
 
     @Autowired
-    private BooksRepository bookRepository;
+    private BookService bookService;
 
     @GetMapping({"","/"})
     public String showBookList(Model model) {
-        List<Book> books = bookRepository.findAll();
+        List<Book> books = bookService.findAll();
         model.addAttribute("books", books);
-        return "books/index1";
+        return "books/index";
     }
 
 }
+
