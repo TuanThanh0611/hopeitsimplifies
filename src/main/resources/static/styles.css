@@ -2,6 +2,7 @@
 body {
     background-image: url(https://wallpapers.com/images/high/study-4k-with-handouts-n3cqzs778f2ozfrs.webp);
     background-size: cover;
+    justify-content: flex-end;
 }
 
 .btn-primary,
@@ -19,4 +20,68 @@ body {
 .btn-second {
     background-color: silver;
     color: white;
+}
+
+
+
+.calendar {
+    width: 350px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.month {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+}
+
+.month-name {
+    font-size: 1.5em;
+}
+
+.weekdays, .days {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.weekdays div, .days div {
+    width: calc(100% / 7);
+    text-align: center;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+.weekdays {
+    background-color: #ddd;
+}
+
+.weekdays div {
+    font-weight: bold;
+}
+
+.days div {
+    border-bottom: 1px solid #eee;
+    border-right: 1px solid #eee;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.days div.empty {
+    background-color: #f3f4f6;
+    cursor: default;
+}
+
+.days div:last-child {
+    border-right: none;
+}
+
+.days div:hover:not(.empty) {
+    background-color: #f1f1f1;
 }
